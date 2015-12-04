@@ -1,104 +1,471 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    Layout = null;
 }
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="~/images/ASP-NET-Banners-01.png" alt="ASP.NET" class="img-responsive" />
-            <div class="container">
-                <div class="carousel-caption">
-                    <p>
-                        Learn how to build ASP.NET apps that can run anywhere.
-                        <a class="btn btn-default btn-default" href="http://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
-                            Learn More
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/Banner-02-VS.png" alt="Visual Studio" class="img-responsive" />
-            <div class="container">
-                <div class="carousel-caption">
-                    <p>
-                        There are powerful new features in Visual Studio for building modern web apps.
-                        <a class="btn btn-default btn-default" href="http://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
-                            Learn More
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/ASP-NET-Banners-02.png" alt="Package Management" class="img-responsive" />
-            <div class="container">
-                <div class="carousel-caption">
-                    <p>
-                        Bring in libraries from NuGet, Bower, and npm, and automate tasks using Grunt or Gulp.
-                        <a class="btn btn-default btn-default" href="http://go.microsoft.com/fwlink/?LinkID=525029&clcid=0x409">
-                            Learn More
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/Banner-01-Azure.png" alt="Microsoft Azure" class="img-responsive" />
-            <div class="container">
-                <div class="carousel-caption">
-                    <p>
-                        Learn how Microsoft's Azure cloud platform allows you to build, deploy, and scale web apps.
-                        <a class="btn btn-default btn-default" href="http://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
-                            Learn More
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="zh" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="enzh" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh">
+<!--<![endif]-->
+<head>
+    <title>The One</title>
 
-<div class="row">
-    <div class="col-md-3">
-        <h2>Application uses</h2>
-        <ul>
-            <li>Sample pages using ASP.NET 5 (MVC 6)</li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkId=518007">Gulp</a> and <a href="http://go.microsoft.com/fwlink/?LinkId=518004">Bower</a> for managing client-side resources</li>
-            <li>Theming using <a href="http://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>New concepts</h2>
-        <ul>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of ASP.NET 5</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkId=518008">Fundamentals in ASP.NET 5</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkID=517849">Client-Side Development using npm, Bower and Gulp</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkID=517850">Develop on different platforms</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Customize app</h2>
-        <ul>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkID=398600">Add Controllers and Views</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkID=398602">Add Data using EntityFramework</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkID=398603">Add Authentication using Identity</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkID=517848">Manage client-side packages using Bower/ Gulp</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Deploy</h2>
-        <ul>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkID=517851">Run your app locally</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkID=517852">Run your app on .NET Core</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkID=517853">Run commands in your app</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure Web Apps</a></li>
-        </ul>
-    </div>
-</div>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <environment names="Development">
+        <!-- Web Fonts -->
+        <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+        <!-- CSS Global Compulsory -->
+        <link rel="stylesheet" href="~/assets/plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="~/assets/css/one.style.css">
+
+        <!-- CSS Footer -->
+        <link rel="stylesheet" href="~/assets/css/footers/footer-v7.css">
+
+        <!-- CSS Implementing Plugins -->
+        <link rel="stylesheet" href="~/assets/plugins/animate.css">
+        <link rel="stylesheet" href="~/assets/plugins/line-icons/line-icons.css">
+        <link rel="stylesheet" href="~/assets/plugins/pace/pace-flash.css">
+        <link rel="stylesheet" href="~/assets/plugins/owl-carousel/owl.carousel.css">
+        <link rel="stylesheet" href="~/assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css">
+        <link rel="stylesheet" href="~/assets/plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css">
+        <link rel="stylesheet" href="~/assets/plugins/revolution-slider/rs-plugin/css/settings.css" type="text/css" media="screen">
+        <!--[if lt IE 9]><link rel="stylesheet" href="~/assets/plugins/revolution-slider/rs-plugin/css/settings-ie8.css" type="text/css" media="screen"><![endif]-->
+        <!-- CSS Customization -->
+        <link rel="stylesheet" href="~/assets/css/custom.css">
+    </environment>
+    <environment names="Staging,Production">
+        <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" asp-append-version="true" />
+        <link rel="stylesheet" href="~/assets/plugins/bootstrap/css/bootstrap.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/assets/css/one.style.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/assets/css/footers/footer-v7.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/assets/plugins/animate.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/assets/plugins/line-icons/line-icons.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/assets/plugins/pace/pace-flash.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/assets/plugins/owl-carousel/owl.carousel.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/assets/plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/assets/plugins/revolution-slider/rs-plugin/css/settings.css" type="text/css" media="screen" asp-append-version="true" />
+        <!--[if lt IE 9]><link rel="stylesheet" href="~/assets/plugins/revolution-slider/rs-plugin/css/settings-ie8.css" type="text/css" media="screen" asp-append-version="true" /><![endif]-->
+        <link rel="stylesheet" href="~/assets/css/custom.css" asp-append-version="true" />
+    </environment>
+</head>
+
+<!--
+The #page-top ID is part of the scrolling feature.
+The data-spy and data-target are part of the built-in Bootstrap scrollspy function.
+-->
+<body id="body" data-spy="scroll" data-target=".one-page-header" class="demo-lightbox-gallery">
+    <!--=== Header ===-->
+    <nav class="one-page-header navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="menu-container page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="#intro">
+                    <span>T</span>he <span>O</span>ne
+                    <!-- <img src="assets/img/logo1.png" alt="Logo"> -->
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <div class="menu-container">
+                    <ul class="nav navbar-nav">
+                        <li class="page-scroll home">
+                            <a asp-controller="Home" asp-action="Index">首页</a>
+                        </li>
+                        <li class="page-scroll">
+                            <a href="javascript:void(0);">模板</a>
+                        </li>
+                        <li class="page-scroll">
+                            <a href="javascript:void(0);">产品中心</a>
+                        </li>
+                        <li class="page-scroll">
+                            <a href="javascript:void(0);">用户中心</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!--=== End Header ===-->
+    <!-- Intro Section -->
+    <section id="intro" class="intro-section">
+        <div class="fullscreenbanner-container">
+            <div class="fullscreenbanner">
+                <ul>
+                    <!-- SLIDE 1 -->
+                    <li data-transition="curtain-1" data-slotamount="5" data-masterspeed="700" data-title="Slide 1">
+                        <!-- MAIN IMAGE -->
+                        <img src="assets/img/sliders/revolution/bg1.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+
+                        <!-- LAYERS -->
+                        <div class="tp-caption rs-caption-1 sft start"
+                             data-x="center"
+                             data-hoffset="0"
+                             data-y="100"
+                             data-speed="800"
+                             data-start="2000"
+                             data-easing="Back.easeInOut"
+                             data-endspeed="300">
+                            这是一个运行在LINUX平台上的ASP.NET网站
+                        </div>
+
+                        <!-- LAYER -->
+                        <div class="tp-caption rs-caption-2 sft"
+                             data-x="center"
+                             data-hoffset="0"
+                             data-y="200"
+                             data-speed="1000"
+                             data-start="3000"
+                             data-easing="Power4.easeOut"
+                             data-endspeed="300"
+                             data-endeasing="Power1.easeIn"
+                             data-captionhidden="off"
+                             style="z-index: 6">
+                            .NET的跨平台是一种幸福 .NET的开源也是一种幸福<br />
+                            而更幸福的是可以通过开源的.NET了解.NET是如何一步步走向跨平台的<br />
+                            所以幸福是一种过程
+                        </div>
+                    </li>
+
+                    <!-- SLIDE 2 -->
+                    <li data-transition="slideup" data-slotamount="5" data-masterspeed="1000" data-title="Slide 2">
+                        <!-- MAIN IMAGE -->
+                        <img src="assets/img/sliders/revolution/bg2.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+
+                        <!-- LAYERS -->
+                        <div class="tp-caption rs-caption-1 sft start"
+                             data-x="center"
+                             data-hoffset="0"
+                             data-y="100"
+                             data-speed="800"
+                             data-start="1500"
+                             data-easing="Back.easeInOut"
+                             data-endspeed="300">
+                            这是一个ASP.NET 5网站
+                        </div>
+
+                        <!-- LAYER -->
+                        <div class="tp-caption rs-caption-2 sft"
+                             data-x="center"
+                             data-hoffset="0"
+                             data-y="200"
+                             data-speed="1000"
+                             data-start="2500"
+                             data-easing="Power4.easeOut"
+                             data-endspeed="300"
+                             data-endeasing="Power1.easeIn"
+                             data-captionhidden="off"
+                             style="z-index: 6">
+                            .NET核心成为一个新的模块化运行库<br>
+                            可以在Windows、Mac以及Linux中运行
+                        </div>
+                    </li>
+
+                    <!-- SLIDE 3 -->
+                    <li data-transition="slideup" data-slotamount="5" data-masterspeed="700" data-title="Slide 3">
+                        <!-- MAIN IMAGE -->
+                        <img src="assets/img/sliders/revolution/bg3.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+
+                        <!-- LAYERS -->
+                        <div class="tp-caption rs-caption-1 sft start"
+                             data-x="center"
+                             data-hoffset="0"
+                             data-y="110"
+                             data-speed="800"
+                             data-start="1500"
+                             data-easing="Back.easeInOut"
+                             data-endspeed="300">
+                            APS.NET 5的发布时间表
+                        </div>
+
+                        <!-- LAYER -->
+                        <div class="tp-caption rs-caption-2 sfb"
+                             data-x="center"
+                             data-hoffset="0"
+                             data-y="210"
+                             data-speed="800"
+                             data-start="2500"
+                             data-easing="Power4.easeOut"
+                             data-endspeed="300"
+                             data-endeasing="Power1.easeIn"
+                             data-captionhidden="off"
+                             style="z-index: 6">
+                            2015-07-17 ---- beta6<br>
+                            2015-08-24 ---- beta7<br>                            
+                            2015-09-21 ---- beta8<br>                            
+                            2015-11-19 ---- RC1<br>                            
+                            2015-Q1 ---- 1.0.0<br>
+                        </div>
+                    </li>
+                </ul>
+                <div class="tp-bannertimer tp-bottom"></div>
+                <div class="tp-dottedoverlay twoxtwo"></div>
+            </div>
+        </div>
+    </section>
+    <!-- End Intro Section -->
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="about-section">
+        <div class="container content-lg">
+            <div class="cube-portfolio">
+                <div id="grid-container" class="cbp-l-grid-gallery">
+                    <div class="cbp-item print motion">
+                        <a href="assets/ajax/project1.html" class="cbp-caption cbp-singlePageInline"
+                           data-title="单点登录&统一授权<br>by Alex Liu">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="assets/img/portfolio/1.jpg" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignLeft">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">单点登录&amp;统一授权</div>
+                                        <div class="cbp-l-caption-desc">by Alex Liu</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cbp-item web-design">
+                        <a href="assets/ajax/project2.html" class="cbp-caption cbp-singlePageInline"
+                           data-title="工作流<br>by Alex Liu">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="assets/img/portfolio/2.jpg" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignLeft">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">工作流</div>
+                                        <div class="cbp-l-caption-desc">by Alex Liu</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cbp-item print motion">
+                        <a href="assets/ajax/project3.html" class="cbp-caption cbp-singlePageInline"
+                           data-title="OA<br>by Alex Liu">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="assets/img/portfolio/3.jpg" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignLeft">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">OA</div>
+                                        <div class="cbp-l-caption-desc">by Alex Liu</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cbp-item web-design print">
+                        <a href="assets/ajax/project4.html" class="cbp-caption cbp-singlePageInline"
+                           data-title="配置中心<br>by Alex Liu">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="assets/img/portfolio/11.jpg" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignLeft">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">配置中心</div>
+                                        <div class="cbp-l-caption-desc">by Alex Liu</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cbp-item motion">
+                        <a href="assets/ajax/project5.html" class="cbp-caption cbp-singlePageInline"
+                           data-title="消息调度中心<br>by Alex Liu">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="assets/img/portfolio/5.jpg" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignLeft">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">消息调度中心</div>
+                                        <div class="cbp-l-caption-desc">by Alex Liu</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cbp-item print motion">
+                        <a href="assets/ajax/project6.html" class="cbp-caption cbp-singlePageInline"
+                           data-title="日志中心<br>by Alex Liu">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="assets/img/portfolio/6.jpg" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignLeft">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">日志中心</div>
+                                        <div class="cbp-l-caption-desc">by Alex Liu</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cbp-item web-design print">
+                        <a href="assets/ajax/project7.html" class="cbp-caption cbp-singlePageInline"
+                           data-title="分布式缓存<br>by Alex Liu">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="assets/img/portfolio/7.jpg" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignLeft">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">分布式缓存</div>
+                                        <div class="cbp-l-caption-desc">by Alex Liu</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cbp-item print">
+                        <a href="assets/ajax/project8.html" class="cbp-caption cbp-singlePageInline"
+                           data-title="统一监控平台<br>by Alex Liu">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="assets/img/portfolio/8.jpg" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignLeft">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">统一监控平台</div>
+                                        <div class="cbp-l-caption-desc">by Alex Liu</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cbp-item motion">
+                        <a href="assets/ajax/project9.html" class="cbp-caption cbp-singlePageInline"
+                           data-title="UI模板<br>by Alex Liu">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="assets/img/portfolio/4.jpg" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignLeft">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">UI模板</div>
+                                        <div class="cbp-l-caption-desc">by Alex Liu</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="parallax-quote parallaxBg">
+            <div class="container">
+                <div class="parallax-quote-in">
+                    <p>Whatever is <span class="color-green">worth</span> doing is <span class="color-green">worth</span> doing well.</p>
+                    <small>JUST BELIEVE IT</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright-section">
+            <p>2015 &copy; All Rights Reserved.</p>
+            <span class="page-scroll"><a href="#intro"><i class="fa fa-angle-double-up back-to-top"></i></a></span>
+        </div>
+    </section>
+    <!-- End Portfolio Section -->
+
+    <environment names="Development">
+        <!-- JS Global Compulsory -->
+        <script type="text/javascript" src="~/assets/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="~/assets/plugins/jquery/jquery-migrate.min.js"></script>
+        <script type="text/javascript" src="~/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <!-- JS Implementing Plugins -->
+        <script type="text/javascript" src="~/assets/plugins/smoothScroll.js"></script>
+        <script type="text/javascript" src="~/assets/plugins/jquery.easing.min.js"></script>
+        <script type="text/javascript" src="~/assets/plugins/pace/pace.min.js"></script>
+        <script type="text/javascript" src="~/assets/plugins/jquery.parallax.js"></script>
+        <script type="text/javascript" src="~/assets/plugins/counter/waypoints.min.js"></script>
+        <script type="text/javascript" src="~/assets/plugins/counter/jquery.counterup.min.js"></script>
+        <script type="text/javascript" src="~/assets/plugins/owl-carousel/owl.carousel.js"></script>
+        <script type="text/javascript" src="~/assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
+        <script type="text/javascript" src="~/assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="~/assets/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+        <script type="text/javascript" src="~/assets/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+        <script type="text/javascript" src="~/assets/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+        <!-- JS Page Level-->
+        <script type="text/javascript" src="~/assets/js/one.app.js"></script>
+        <script type="text/javascript" src="~/assets/js/forms/login.js"></script>
+        <script type="text/javascript" src="~/assets/js/forms/contact.js"></script>
+        <script type="text/javascript" src="~/assets/js/plugins/pace-loader.js"></script>
+        <script type="text/javascript" src="~/assets/js/plugins/owl-carousel.js"></script>
+        <script type="text/javascript" src="~/assets/js/plugins/revolution-slider.js"></script>
+        <script type="text/javascript" src="~/assets/js/plugins/cube-portfolio/cube-portfolio-lightbox.js"></script>
+        <!--[if lt IE 9]>
+            <script src="~/assets/plugins/respond.js"></script>
+            <script src="assets/plugins/html5shiv.js"></script>
+            <script src="~/assets/js/plugins/placeholder-IE-fixes.js"></script>
+            <script src="assets/plugins/sky-forms-pro/skyforms/js/sky-forms-ie8.js"></script>
+        <![endif]-->
+        <!--[if lt IE 10]>
+            <script src="~/assets/plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js"></script>
+        <![endif]-->
+    </environment>
+    <environment names="Staging,Production">
+        <script type="text/javascript" asp-append-version="true" src="~/assets/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" asp-append-version="true" src="~/assets/plugins/jquery/jquery-migrate.min.js"></script>
+        <script type="text/javascript" asp-append-version="true" src="~/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" asp-append-version="true" src="~/assets/plugins/smoothScroll.js"></script>
+        <script type="text/javascript" asp-append-version="true" src="~/assets/plugins/jquery.easing.min.js"></script>
+        <script type="text/javascript" asp-append-version="true" src="~/assets/plugins/pace/pace.min.js"></script>
+        <script type="text/javascript" asp-append-version="true" src="~/assets/plugins/jquery.parallax.js"></script>
+        <script type="text/javascript" asp-append-version="true" src="~/assets/plugins/counter/waypoints.min.js"></script>
+        <script type="text/javascript" asp-append-version="true" src="~/assets/plugins/counter/jquery.counterup.min.js"></script>
+        <script type="text/javascript" asp-append-version="true" src="~/assets/plugins/owl-carousel/owl.carousel.js"></script>
+        <script type="text/javascript" asp-append-version="true" src="~/assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
+        <script type="text/javascript" asp-append-version="true" src="~/assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
+        <script type="text/javascript" asp-append-version="true" src="~/assets/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+        <script type="text/javascript" asp-append-version="true" src="~/assets/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+        <script type="text/javascript" asp-append-version="true" src="~/assets/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+        <script type="text/javascript" asp-append-version="true" src="~/assets/js/one.app.js"></script>
+        <script type="text/javascript" asp-append-version="true" src="~/assets/js/forms/login.js"></script>
+        <script type="text/javascript" asp-append-version="true" src="~/assets/js/forms/contact.js"></script>
+        <script type="text/javascript" asp-append-version="true" src="~/assets/js/plugins/pace-loader.js"></script>
+        <script type="text/javascript" asp-append-version="true" src="~/assets/js/plugins/owl-carousel.js"></script>
+        <script type="text/javascript" asp-append-version="true" src="~/assets/js/plugins/revolution-slider.js"></script>
+        <script type="text/javascript" asp-append-version="true" src="~/assets/js/plugins/cube-portfolio/cube-portfolio-lightbox.js"></script>
+        <!--[if lt IE 9]>
+            <script asp-append-version="true" src="~/assets/plugins/respond.js"></script>
+            <script asp-append-version="true" src="assets/plugins/html5shiv.js"></script>
+            <script asp-append-version="true" src="~/assets/js/plugins/placeholder-IE-fixes.js"></script>
+            <script asp-append-version="true" src="assets/plugins/sky-forms-pro/skyforms/js/sky-forms-ie8.js"></script>
+        <![endif]-->
+        <!--[if lt IE 10]>
+            <script asp-append-version="true" src="~/assets/plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js"></script>
+        <![endif]-->
+    </environment>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            App.init();
+            //App.initCounter();
+            //App.initParallaxBg();
+            //LoginForm.initLoginForm();
+            //ContactForm.initContactForm();
+            //OwlCarousel.initOwlCarousel();
+            RevolutionSlider.initRSfullScreen();
+        });
+    </script>
+</body>
+</html>
